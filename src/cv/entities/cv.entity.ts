@@ -9,7 +9,7 @@ export class CvEntity {
     length: 50})
     name: string;
 
-    @Column({length: 50})
+    @Column({length: 70})
     firstname: string;
 
     @Column()
