@@ -1,7 +1,8 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {TimesTampEntities} from "../../generics/timesTamp.entities";
 
 @Entity('cv')
-export class CvEntity {
+export class CvEntity extends TimesTampEntities{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -19,6 +20,11 @@ export class CvEntity {
     cin: number;
 
     @Column()
-    jon: string;
+    job: string;
+
+    @Column()
+    path: string;
+
+
 
 }
