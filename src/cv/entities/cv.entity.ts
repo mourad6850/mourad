@@ -24,7 +24,4 @@ export class CvEntity extends TimesTampEntities{
 
     @Column()
     path: string;
-
-
-
 }
