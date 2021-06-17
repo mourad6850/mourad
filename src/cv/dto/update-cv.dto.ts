@@ -1,29 +1,29 @@
-import {IsNotEmpty, IsNumber, IsOptional, IsString, Max, Min} from "class-validator";
+import {IsNumber, IsOptional, IsString, Max, Min} from "class-validator";
 import {Type} from "class-transformer";
 
 export class UpdateCvDto {
 
-    @IsNotEmpty()
     @IsString()
+    @IsOptional()
     name: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     firstname: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @Type(() => Number)
     @IsNumber()
     @Min(15)
     @Max(65)
     age: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @Type(() => Number)
     @IsNumber()
     cin: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     job: string;
 
